@@ -1,0 +1,29 @@
+<section class="py-12 bg-blue-50 border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav class="flex mb-8 text-sm font-medium text-gray-500" aria-label="Breadcrumb">
+            <ol class="flex items-center space-x-2">
+                <li><a href="/" class="hover:text-blue-600">Home</a></li>
+                <li class="flex items-center space-x-2">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+                    <span class="text-gray-900">{{categoryName}}</span>
+                </li>
+            </ol>
+        </nav>
+
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 brand-font">{{title}}</h1>
+        <p class="text-lg text-gray-600 max-w-3xl">{{description}}</p>
+    </div>
+</section>
+
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {{toolLinks}}
+        </div>
+        
+        <div class="mt-20 prose prose-blue max-w-none text-gray-600">
+            <h2 class="text-3xl font-bold text-gray-900 brand-font mb-6">About {{categoryName}}</h2>
+            <p>{{seoContent}}</p>
+        </div>
+    </div>
+</section>

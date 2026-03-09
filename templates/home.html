@@ -1,0 +1,134 @@
+<section class="bg-gradient-to-br from-blue-600 to-indigo-700 py-24 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+        <svg class="h-full w-full" preserveAspectRatio="none" viewBox="0 0 100 100">
+            <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5"/>
+            </pattern>
+            <rect width="100" height="100" fill="url(#grid)"/>
+        </svg>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 brand-font leading-tight">Universal Unit Conversion <br><span class="text-blue-200">Simplified</span></h1>
+        <p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">Instant, accurate, and professional conversion tools for hundreds of units. Built for speed and ease of use.</p>
+        
+        <div class="max-w-xl mx-auto relative">
+            <div class="glass p-2 rounded-2xl flex items-center">
+                <div class="flex-grow flex items-center px-4">
+                    <svg class="w-5 h-5 text-gray-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    <input type="text" id="heroSearch" placeholder="Search for a converter (e.g. 'kg to lb')" class="bg-transparent border-none focus:ring-0 text-gray-800 placeholder-gray-400 w-full py-3 text-lg">
+                </div>
+                <button class="bg-blue-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-700 transition-colors shadow-lg">Search</button>
+            </div>
+            <div id="searchResults" class="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl z-50 text-left hidden overflow-hidden border">
+                <!-- Search results injected here -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 brand-font mb-4">Browse by Category</h2>
+            <p class="text-gray-500">Explore our comprehensive collection of specialized conversion tools.</p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {{categoryGrid}}
+        </div>
+    </div>
+</section>
+
+<section class="py-20 bg-gray-50 border-t">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <h2 class="text-3xl font-bold text-gray-900 brand-font mb-4">Popular Tools</h2>
+                <p class="text-gray-500">The most frequently used conversion tools on our platform.</p>
+            </div>
+            <a href="/all-converters.html" class="text-blue-600 font-bold hover:underline">View All →</a>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {{popularTools}}
+        </div>
+    </div>
+</section>
+
+<section class="py-20 bg-gray-50 border-y">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-bold text-gray-900 brand-font mb-8">{{blogTitle}}</h2>
+                <div class="prose prose-blue text-gray-600 leading-relaxed max-w-none">
+                    <p>{{blogContent}}</p>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h3 class="text-2xl font-bold text-gray-900 brand-font mb-6">Common Questions</h3>
+                {{faqs}}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="glass rounded-3xl p-12 bg-blue-50 border border-blue-100 flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-8 md:mb-0 max-w-xl text-center md:text-left">
+                <h2 class="text-3xl font-bold text-gray-900 brand-font mb-4">Fast & Accurate Measurement Conversions</h2>
+                <p class="text-gray-600 text-lg">Our platform is designed for professionals, students, and engineers who need reliable results instantly. No bloat, just speed.</p>
+            </div>
+            <div class="flex space-x-4">
+                <div class="text-center p-6 bg-white rounded-2xl shadow-sm border border-blue-100 flex-grow">
+                    <div class="text-3xl font-bold text-blue-600 mb-1">100+</div>
+                    <div class="text-gray-500 text-sm uppercase tracking-wider font-bold">Tools</div>
+                </div>
+                <div class="text-center p-6 bg-white rounded-2xl shadow-sm border border-blue-100 flex-grow">
+                    <div class="text-3xl font-bold text-blue-600 mb-1">0.1s</div>
+                    <div class="text-gray-500 text-sm uppercase tracking-wider font-bold">Res. Time</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    window.toolsIndex = {{toolsIndex}};
+
+    const searchInput = document.getElementById('heroSearch');
+    const resultsDiv = document.getElementById('searchResults');
+
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        if (query.length < 2) {
+            resultsDiv.classList.add('hidden');
+            return;
+        }
+
+        const matches = window.toolsIndex.filter(tool => {
+            return tool.title.toLowerCase().includes(query) || 
+                   tool.keywords.some(k => k.toLowerCase().includes(query));
+        }).slice(0, 8);
+
+        if (matches.length > 0) {
+            resultsDiv.innerHTML = matches.map(tool => `
+                <a href="${tool.url}" class="block px-6 py-4 hover:bg-blue-50 border-b last:border-0 transition-colors">
+                    <div class="font-bold text-gray-900">${tool.title}</div>
+                    <div class="text-xs text-gray-400 uppercase tracking-widest">${tool.category}</div>
+                </a>
+            `).join('');
+            resultsDiv.classList.remove('hidden');
+        } else {
+            resultsDiv.innerHTML = '<div class="px-6 py-4 text-gray-500 italic">No converters found. Try "kg to lb" or "meter to feet".</div>';
+            resultsDiv.classList.remove('hidden');
+        }
+    });
+
+    // Close results when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!searchInput.contains(e.target) && !resultsDiv.contains(e.target)) {
+            resultsDiv.classList.add('hidden');
+        }
+    });
+</script>

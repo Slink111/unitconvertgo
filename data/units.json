@@ -1,0 +1,138 @@
+{
+  "categories": [
+    {
+      "id": "length",
+      "name": "Length",
+      "slug": "length-converters",
+      "units": [
+        { "id": "m", "name": "Meter", "plural": "Meters", "factor": 1 },
+        { "id": "km", "name": "Kilometer", "plural": "Kilometers", "factor": 1000 },
+        { "id": "cm", "name": "Centimeter", "plural": "Centimeters", "factor": 0.01 },
+        { "id": "mm", "name": "Millimeter", "plural": "Millimeters", "factor": 0.001 },
+        { "id": "in", "name": "Inch", "plural": "Inches", "factor": 0.0254 },
+        { "id": "ft", "name": "Foot", "plural": "Feet", "factor": 0.3048 },
+        { "id": "yd", "name": "Yard", "plural": "Yards", "factor": 0.9144 },
+        { "id": "mi", "name": "Mile", "plural": "Miles", "factor": 1609.34 },
+        { "id": "nmi", "name": "Nautical Mile", "plural": "Nautical Miles", "factor": 1852 },
+        { "id": "um", "name": "Micrometer", "plural": "Micrometers", "factor": 0.000001 }
+      ]
+    },
+    {
+      "id": "area",
+      "name": "Area",
+      "slug": "area-converters",
+      "units": [
+        { "id": "sqm", "name": "Square Meter", "factor": 1 },
+        { "id": "sqft", "name": "Square Foot", "factor": 0.092903 },
+        { "id": "acre", "name": "Acre", "factor": 4046.86 },
+        { "id": "ha", "name": "Hectare", "factor": 10000 },
+        { "id": "bigha", "name": "Bigha", "factor": 2500, "note": "Approximate, varies by region" },
+        { "id": "guntha", "name": "Guntha", "factor": 101.17 },
+        { "id": "kattha", "name": "Kattha", "factor": 126.44 },
+        { "id": "decimal", "name": "Decimal", "factor": 40.47 },
+        { "id": "sqyd", "name": "Square Yard", "factor": 0.836127 },
+        { "id": "sqkm", "name": "Square Kilometer", "factor": 1000000 },
+        { "id": "sqin", "name": "Square Inch", "factor": 0.00064516 },
+        { "id": "sqcm", "name": "Square Centimeter", "factor": 0.0001 }
+      ]
+    },
+    {
+      "id": "weight",
+      "name": "Weight / Mass",
+      "slug": "weight-converters",
+      "units": [
+        { "id": "kg", "name": "Kilogram", "factor": 1 },
+        { "id": "g", "name": "Gram", "factor": 0.001 },
+        { "id": "lb", "name": "Pound", "factor": 0.453592 },
+        { "id": "mg", "name": "Milligram", "factor": 0.000001 },
+        { "id": "oz", "name": "Ounce", "factor": 0.0283495 },
+        { "id": "ton", "name": "Ton", "factor": 1000 },
+        { "id": "st", "name": "Stone", "factor": 6.35029 },
+        { "id": "mt", "name": "Metric Ton", "factor": 1000 }
+      ]
+    },
+    {
+      "id": "volume",
+      "name": "Volume",
+      "slug": "volume-converters",
+      "units": [
+        { "id": "l", "name": "Liter", "factor": 1 },
+        { "id": "ml", "name": "Milliliter", "factor": 0.001 },
+        { "id": "gal", "name": "Gallon", "factor": 3.78541 },
+        { "id": "cum", "name": "Cubic Meter", "factor": 1000 },
+        { "id": "cup", "name": "Cup", "factor": 0.236588 },
+        { "id": "tbsp", "name": "Tablespoon", "factor": 0.0147868 },
+        { "id": "tsp", "name": "Teaspoon", "factor": 0.00492892 },
+        { "id": "pt", "name": "Pint", "factor": 0.473176 },
+        { "id": "qt", "name": "Quart", "factor": 0.946353 },
+        { "id": "floz", "name": "Fluid Ounce", "factor": 0.0295735 },
+        { "id": "cuft", "name": "Cubic Foot", "factor": 28.3168 },
+        { "id": "cuin", "name": "Cubic Inch", "factor": 0.0163871 },
+        { "id": "barrel", "name": "Barrel", "factor": 158.987 }
+      ]
+    },
+    {
+      "id": "temperature",
+      "name": "Temperature",
+      "slug": "temperature-converters",
+      "isSpecial": true,
+      "units": [
+        { "id": "c", "name": "Celsius" },
+        { "id": "f", "name": "Fahrenheit" },
+        { "id": "k", "name": "Kelvin" }
+      ]
+    },
+    {
+      "id": "speed",
+      "name": "Speed",
+      "slug": "speed-converters",
+      "units": [
+        { "id": "kmh", "name": "km/h", "factor": 1 },
+        { "id": "mph", "name": "mph", "factor": 1.60934 },
+        { "id": "ms", "name": "m/s", "factor": 3.6 },
+        { "id": "knot", "name": "Knot", "factor": 1.852 },
+        { "id": "mach", "name": "Mach", "factor": 1234.8 }
+      ]
+    },
+    {
+      "id": "time",
+      "name": "Time",
+      "slug": "time-converters",
+      "units": [
+        { "id": "sec", "name": "Second", "factor": 1 },
+        { "id": "min", "name": "Minute", "factor": 60 },
+        { "id": "hr", "name": "Hour", "factor": 3600 },
+        { "id": "day", "name": "Day", "factor": 86400 },
+        { "id": "week", "name": "Week", "factor": 604800 },
+        { "id": "month", "name": "Month", "factor": 2629746, "note": "Average month length" },
+        { "id": "year", "name": "Year", "factor": 31556952 }
+      ]
+    },
+    {
+      "id": "storage",
+      "name": "Data Storage",
+      "slug": "data-storage-converters",
+      "units": [
+        { "id": "b", "name": "Byte", "factor": 1 },
+        { "id": "kb", "name": "KB", "factor": 1024 },
+        { "id": "mb", "name": "MB", "factor": 1048576 },
+        { "id": "gb", "name": "GB", "factor": 1073741824 },
+        { "id": "tb", "name": "TB", "factor": 1099511627776 },
+        { "id": "bit", "name": "Bit", "factor": 0.125 }
+      ]
+    },
+    {
+      "id": "energy",
+      "name": "Energy / Power",
+      "slug": "energy-converters",
+      "units": [
+        { "id": "j", "name": "Joule", "factor": 1 },
+        { "id": "kwh", "name": "kWh", "factor": 3600000 },
+        { "id": "w", "name": "Watt", "factor": 1, "isPower": true },
+        { "id": "kw", "name": "kW", "factor": 1000, "isPower": true },
+        { "id": "hp", "name": "Horsepower", "factor": 745.7, "isPower": true },
+        { "id": "btu", "name": "BTU", "factor": 1055.06 }
+      ]
+    }
+  ]
+}
